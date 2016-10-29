@@ -1,0 +1,60 @@
+!!!5
+%html{class:"no-js", lang:""}
+  %head
+    %meta{charset:"utf-8"}
+    %title Disrruptivo
+    %meta{name:"description", content:"Descripción"}
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"css/bootstrap.css"}
+    %link{href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css", rel:"stylesheet"}
+    %link{href:"https://fonts.googleapis.com/css?family=Indie+Flower", rel:"stylesheet", type:"text/css"}
+    %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}
+    %link{rel:"stylesheet", href:"css/style.css"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+  %body
+    ="<!--[if lt IE 8]>"
+    %p{class:"browserupgrade"}
+      Estás usando un navegador
+      %strong desactualizado.
+      Por favor
+      %a{href:"http://browsehappy.com/"}
+        actualiza tu navegador
+      para una mejor experiencia
+    ="<![endif]-->"
+    .video-container
+      %video{autoplay:true, loop:true,width:"1280",height:"720",poster:"src/vid/snapshots/Go-With-The-Flow.jpg"}
+        %source{src:"src/vid/mp4/Go-With-The-Flow.mp4",typ: "video/mp4"}
+        %source{src:"src/vid/webm/Go-With-The-Flow.webm",typ:"video/webm"}
+    .row.full-height.middle-xs.center-xs.up.relative
+      .col-xs-12
+        .box.white-text
+          %h1.dancing-script.title.grosor.no-margin Disrruptivate
+      %nav.fixed.top.right.navigation.white-text#navigation.menu
+        -menu = ["¿Que es?","¿Como hacer tu propia empresa?","Registra tu empresa","Catalogo de empresas"]
+        -hiper = []
+        %ul.list-inline.dancing-script
+          %li
+            %a{href:'index.html'} ¿Que es?
+          %li
+            %a{href:'html/como.html'} ¿Como hacer tu propia empresa?
+          %li
+            %a{href:'html/registra.html'} Registra tu empresa
+          %li
+            %a{href:'html/catalogo.html'} Catalogo de empresas
+
+    .absolute.black.large-padding.bottom.white-text.full-width#desciption
+      .row.middle-xs.center-xs
+        .col-xs-7.col-sm-6.white-text.medium Hola tu estadia aqui es importante
+        .col-xs.hidden
+          .box
+            %nav.text-right.navigation
+              %ul.list-inline
+                -menu.each do |item|
+                  %li
+                    %a{} item
+  .full-height
+  %script{src:"https://code.jquery.com/jquery-3.1.0.slim.min.js",integrity:"sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=",crossorigin:"anonymous"}
+  %script
+    window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
+  %script{src:"/js/main.js"}
